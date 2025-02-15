@@ -7,7 +7,7 @@ Prerequisites
 VirtualBox installed and configured with two Virtual Machines (VMs).
 Both VMs are connected to the same network for communication.
 
-#Step 1: Verify IP Addresses of Virtual Machines
+# Step 1: Verify IP Addresses of Virtual Machines
 
 Use the following command on both VMs to check their IP addresses:
 
@@ -16,7 +16,7 @@ ip a | grep inet
 Note the assigned IPs for use in the next steps.
 
 
-#Step 2: Test Connectivity Between Virtual Machines
+# Step 2: Test Connectivity Between Virtual Machines
 Ensure both VMs can communicate by pinging each other:
 
 ping <VM2-IP>  
@@ -27,13 +27,13 @@ nano Ankit.py
 
 If packets are received, the VMs are successfully connected.
 
-#Step 3: Install Python and Flask on Both VMs
+# Step 3: Install Python and Flask on Both VMs
 Run the following on both VMs to install Python and Flask:
 
 sudo apt update && sudo apt install -y python3 python3-pip  
 pip3 install flask  
 
-#Step 4: Create and Deploy a Flask Application on VM1
+# Step 4: Create and Deploy a Flask Application on VM1
 On VM1, create a new directory and navigate to it:
 
 mkdir ~/flask_app && cd ~/flask_app
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 Run the Flask application:
 
 python3 Ankit.py  
-Step 5: Install cURL on VM2 and Test the Microservice
+# Step 5: Install cURL on VM2 and Test the Microservice
 On VM2, install curl if not already installed:
 
 sudo apt install -y curl  
